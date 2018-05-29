@@ -9,7 +9,7 @@
    - Use local db to populate front-end
    - Display list of servers as a drop-down list or similar
    - Once a particular server has been selected display a line graph for the values.
-   - Also inclue summary of lowest, highest and average value in the set
+   - Also include summary of lowest, highest and average value in the set
 
 3. The exercise should be completed using:
    - PHP(object oriented approach) preferably using Laravel framework
