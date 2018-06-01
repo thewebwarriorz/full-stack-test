@@ -26,4 +26,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/refresh', 'RefreshController@index');
     Route::get('/refresh/do-refresh', 'RefreshController@doRefresh');
     Route::get('/servers', 'ServersController@index');
+    Route::get('/servers/statistic/{id}', 'ServersController@statistic');
+    Route::get('/servers/chart/{id}', 'ServersController@chart');
 });
