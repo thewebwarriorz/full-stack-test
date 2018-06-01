@@ -40,29 +40,12 @@ nav.navbar.navbar-light .navbar-brand {
 }
 
 /*--------------------------------------------------
-  Clients list
+  Server list
 -------------------------------------------------- */
-table tr.character th {
-  background-color: $black;
-  color: $white;
+#accordion .card-header button:hover {
+  text-decoration: none;
 }
 
-table tr.character th {
-  font-size: $font-size-base * 2;
-}
-
-table tr.character th span.badge {
-  font-size: $font-size-base * 1.2;
-}
-
-.logo-thumbnail {
-  max-width: 100px;
-}
-
-.selected-character {
-  font-weight: $font-weight-bold;
-  color: $white;
-}
 
 /*--------------------------------------------------
   Sticky footer

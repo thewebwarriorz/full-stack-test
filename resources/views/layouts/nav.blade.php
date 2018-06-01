@@ -14,7 +14,7 @@
                 <ul class="navbar-nav mr-auto">
                     @auth
                         <a class="nav-link text-white" href="{{ url('/home') }}">Home</a>
-                        <a class="nav-link text-white" href="{{ url('/clients') }}">Clients</a>
+                        <a class="nav-link text-white" href="{{ url('/servers') }}">Servers list</a>
                     @endauth
                 </ul>
                 <!-- /Left Side Of Navbar -->
@@ -31,7 +31,7 @@
                         </li>
                         @else
                             <li>
-                                <a class="nav-link text-white" href="/refresh/">Refresh database</a>
+                                <a class="nav-link text-white" href="/refresh">Refresh database</a>
                             </li>
 
                             <li class="nav-item dropdown">

@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ * Admin routes
+ */
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/refresh', 'RefreshController@index');
+    Route::get('/refresh/do-refresh', 'RefreshController@doRefresh');
+    Route::get('/servers', 'ServersController@index');
+});

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class HomeController extends Controller
+use App\Servers;
+
+class ServersController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -15,12 +17,16 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the servers list.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('home');
+
+        // Get all servers
+        $servers = Servers::all();
+
+        return view('servers')->with('servers', $servers);
     }
 }

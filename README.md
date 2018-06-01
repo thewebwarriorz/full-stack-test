@@ -27,4 +27,5 @@
 * The test should take no longer than 3 hours to complete. Please stop once you have reached this point.
   
 ## Enviroment
+* Use PHP 7.X
 * A virtual timefly.io domain has added for this project.
