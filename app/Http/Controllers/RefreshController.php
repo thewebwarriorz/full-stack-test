@@ -17,7 +17,7 @@ use GuzzleHttp\Client;
 class RefreshController extends Controller
 {
     // Fetch data from this URL
-    private static $serversUrl = "https://jbanew.staging.joybusinessacademy.com/api/v2/assignment/servers";
+    private $serversUrl = null;
 
     /**
      * Create a new controller instance.
@@ -26,6 +26,7 @@ class RefreshController extends Controller
      */
     public function __construct()
     {
+        $this->serversUrl = env('SERVERS_URL', 'default');
         $this->middleware('auth');
     }
 
@@ -48,7 +49,7 @@ class RefreshController extends Controller
     {
 
         $client = new Client();
-        $response = $client->get(self::$serversUrl);
+        $response = $client->get($this->serversUrl);
         $responseStatusCode = $response->getStatusCode();
         $responseObject = \GuzzleHttp\json_decode($response->getBody());
 
@@ -134,7 +135,7 @@ class RefreshController extends Controller
     {
 
         $client = new Client();
-        $response = $client->get(self::$serversUrl . "/$id");
+        $response = $client->get($this->serversUrl . "/$id");
         $responseStatusCode = $response->getStatusCode();
         $responseObject = \GuzzleHttp\json_decode($response->getBody());
 
